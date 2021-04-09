@@ -28,9 +28,9 @@ jobs:
       - name: Install NodeJS
         uses: actions/setup-node@v2-beta
         with:
-         key: 12
+         node-version: 12
       - name: Install Surge
         run: npm install -g surge
-      - name: deploying using surge
+      - name: Run Surge
         run: surge ./ kashibootcamp0409.surge.sh --token $ {{secrets.Surge_Token}}
    
